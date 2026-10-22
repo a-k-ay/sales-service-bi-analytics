@@ -1,24 +1,28 @@
+/// Sales order lines (one row per order line), cleaned.
 table fact_sales
 	lineageTag: 20d6947d-9343-42c9-947b-e870ee2364c0
 
+	/// Order line ID.
 	column order_line_id
 		dataType: int64
 		formatString: 0
 		lineageTag: 0e5b1235-8fb3-476e-8f65-e082f795178e
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: order_line_id
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Order ID; several lines can share one order.
 	column order_id
 		dataType: int64
 		formatString: 0
 		lineageTag: be87c231-0e5f-4610-ae2c-951b36223b2e
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: order_id
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Order number as shown in the ERP.
 	column order_number
 		dataType: string
 		lineageTag: 1b1c7517-c68d-42ee-a28e-9178eb65fcc3
@@ -29,7 +33,8 @@ table fact_sales
 
 	column order_date
 		dataType: dateTime
-		formatString: Long Date
+		isHidden
+		formatString: mm/dd/yyyy
 		lineageTag: 17f6ccb5-42ff-4420-be86-37d047d6f38d
 		summarizeBy: none
 		sourceColumn: order_date
@@ -40,7 +45,8 @@ table fact_sales
 
 	column ship_date
 		dataType: dateTime
-		formatString: Long Date
+		isHidden
+		formatString: mm/dd/yyyy
 		lineageTag: 92ee590f-871f-451a-b142-b735780a0f5d
 		summarizeBy: none
 		sourceColumn: ship_date
@@ -51,6 +57,7 @@ table fact_sales
 
 	column customer_id
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 0ae67f5d-9a29-4636-9cb2-c6e0db84f4ba
 		summarizeBy: none
@@ -60,6 +67,7 @@ table fact_sales
 
 	column product_id
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 31aeffc7-15f6-424b-8a37-6f9c25518290
 		summarizeBy: none
@@ -67,6 +75,7 @@ table fact_sales
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Sales representative.
 	column sales_rep_id
 		dataType: string
 		lineageTag: eda99dbc-3c1e-455c-870d-96aad9752dfd
@@ -75,6 +84,7 @@ table fact_sales
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Capital (machines, molds), HotRunner, Aftermarket (parts) or Service.
 	column order_type
 		dataType: string
 		lineageTag: fce9be80-4659-450a-ba16-d7f1a525436e
@@ -83,6 +93,7 @@ table fact_sales
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Open (backlog), Shipped or Closed.
 	column order_status
 		dataType: string
 		lineageTag: 3a804f7b-cb7c-4558-be8b-669649d389a8
@@ -91,19 +102,22 @@ table fact_sales
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Units on the order line.
 	column quantity
 		dataType: int64
 		formatString: 0
 		lineageTag: 4e5a2533-6d8e-46ac-bb74-1678ee6b02b4
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: quantity
 
 		annotation SummarizationSetBy = Automatic
 
 	column net_amount_usd
 		dataType: double
+		isHidden
+		isAvailableInMdx: false
 		lineageTag: 5dfca7a4-a71c-4998-b71c-b31843a8094f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: net_amount_usd
 
 		annotation SummarizationSetBy = Automatic
@@ -112,8 +126,10 @@ table fact_sales
 
 	column std_cost_amount_usd
 		dataType: double
+		isHidden
+		isAvailableInMdx: false
 		lineageTag: 0419fdcf-b40c-4fe5-8f1d-77adc5bdf5ba
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: std_cost_amount_usd
 
 		annotation SummarizationSetBy = Automatic

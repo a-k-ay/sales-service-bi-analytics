@@ -1,34 +1,46 @@
+/// All measures, grouped in display folders.
 table _Measures
 	lineageTag: b319fb0f-3a20-4be2-b57a-72a79bcac1cb
 
+	/// Net order-line value after discount. Excludes cancelled orders, orphan products and quantity <= 0.
 	measure Revenue = SUM ( fact_sales[net_amount_usd] )
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales
 		lineageTag: cb2e573d-6ffb-4a37-b495-611872c05fb9
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	/// Standard cost of the units sold.
 	measure 'Std Cost' = SUM ( fact_sales[std_cost_amount_usd] )
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales
 		lineageTag: b28bd12b-96a6-4fc1-b328-2b7af0ce5209
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	/// Revenue minus standard cost.
 	measure 'Gross Margin' = [Revenue] - [Std Cost]
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales
 		lineageTag: 26089317-d875-4475-b48a-ee44886d41b9
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	/// Gross margin as a share of revenue.
 	measure 'Gross Margin %' = DIVIDE ( [Revenue] - [Std Cost], [Revenue] )
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Sales
 		lineageTag: 50028d00-a248-4f69-8a62-fbdb3530c40c
 
+	/// Revenue for the same period last year.
 	measure 'Revenue PY' = CALCULATE ( [Revenue], SAMEPERIODLASTYEAR ( dim_date[date] ) )
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales
 		lineageTag: 94a7c7ce-2f09-43ac-9219-df326cce9553
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	/// Year-to-date revenue vs the same period last year, ending at the last date with data (like-for-like).
 	measure 'Revenue YoY %' =
 			
 			VAR _EndDate = MAX ( fact_sales[order_date] )
@@ -36,85 +48,122 @@ table _Measures
 			VAR _ThisYTD = CALCULATE ( [Revenue], DATESBETWEEN ( dim_date[date], DATE ( _Yr, 1, 1 ), _EndDate ) )
 			VAR _LastYTD = CALCULATE ( [Revenue], DATESBETWEEN ( dim_date[date], DATE ( _Yr - 1, 1, 1 ), EDATE ( _EndDate, -12 ) ) )
 			RETURN DIVIDE ( _ThisYTD - _LastYTD, _LastYTD )
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Sales
 		lineageTag: 670365e9-27fb-45a5-b815-aadc4d13153a
 
+	/// Revenue from 1 January to the current date in context.
 	measure 'Revenue YTD' = TOTALYTD ( [Revenue], dim_date[date] )
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales
 		lineageTag: c51c5883-330d-4b0b-a793-9a96fc55b732
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	/// Revenue dated by ship date instead of order date (inactive relationship via USERELATIONSHIP).
 	measure 'Revenue by Ship Date' = CALCULATE ( [Revenue], USERELATIONSHIP ( fact_sales[ship_date], dim_date[date] ) )
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales
 		lineageTag: d6b9defc-c0d5-4cca-be67-4338d0bb5165
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	/// Revenue of open orders: ordered but not shipped yet.
 	measure Backlog = CALCULATE ( [Revenue], fact_sales[order_status] = "Open" )
 		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales
 		lineageTag: 0691df37-3cbd-4549-9bfb-f135cced80ab
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	/// Spare-parts (Aftermarket) revenue as a share of total revenue.
 	measure 'Aftermarket Share %' = DIVIDE ( CALCULATE ( [Revenue], fact_sales[order_type] = "Aftermarket" ), [Revenue] )
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Sales
 		lineageTag: ed654423-4b55-426d-973b-d84d0ed69d38
 
+	/// Run hours / planned hours.
 	measure Availability = DIVIDE ( SUM ( fact_machine_daily[run_hours] ), SUM ( fact_machine_daily[planned_hours] ) )
-		formatString: 0.0%;-0.0%;0.0%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Machine Health
 		lineageTag: c57a5443-b05a-46b3-88f8-8a65422ffd2f
 
+	/// Total parts / ideal parts (run hours x ideal rate).
 	measure Performance = DIVIDE ( SUM ( fact_machine_daily[total_parts] ), SUM ( fact_machine_daily[ideal_parts] ) )
-		formatString: 0.0%;-0.0%;0.0%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Machine Health
 		lineageTag: 0a369614-aba8-4fe8-8db8-625ca4139812
 
+	/// Good parts / total parts.
 	measure Quality = DIVIDE ( SUM ( fact_machine_daily[good_parts] ), SUM ( fact_machine_daily[total_parts] ) )
-		formatString: 0.0%;-0.0%;0.0%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Machine Health
 		lineageTag: f630c890-569a-4971-bc85-aa263521be3c
 
+	/// Availability x Performance x Quality from daily telemetry. Excludes 45 impossible machine-days.
 	measure OEE = [Availability] * [Performance] * [Quality]
-		formatString: 0.0%;-0.0%;0.0%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Machine Health
 		lineageTag: f64c28ff-f730-4b84-8b0c-247d4ed8c3cb
 
+	/// Number of unique service tickets.
 	measure Tickets = COUNTROWS ( fact_service_ticket )
-		formatString: 0
+		formatString: #,0
+		displayFolder: Service
 		lineageTag: d4dfddbc-5568-49d4-92c9-a8c881eed51d
 
+	/// Mean time to repair: average hours from opened to closed, closed tickets only; negative times excluded.
 	measure 'MTTR (hrs)' = CALCULATE ( AVERAGE ( fact_service_ticket[resolution_hours] ), fact_service_ticket[status] = "Closed" )
-		formatString: 0.0
+		formatString: #,0.0
+		displayFolder: Service
 		lineageTag: eb4d162f-f6e2-4571-b22e-82c0704d1d5b
 
+	/// Share of tickets fixed remotely.
 	measure '% Remote Resolution' = DIVIDE ( CALCULATE ( [Tickets], fact_service_ticket[resolution_type] = "Remote" ), [Tickets] )
-		formatString: 0.0%;-0.0%;0.0%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Service
 		lineageTag: 4250aecd-3b66-4b2a-8c5e-b4d25c2bf257
 
+	/// Share of machines with any remote-monitoring tier.
 	measure 'Monitored Machines %' = DIVIDE ( CALCULATE ( COUNTROWS ( dim_machine ), dim_machine[is_monitored] = "Monitored" ), COUNTROWS ( dim_machine ) )
-		formatString: 0.0%;-0.0%;0.0%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Service
 		lineageTag: 9ec22f5b-3a0d-495f-83d9-8385293f644b
 
+	/// Machine downtime hours recorded on service tickets.
 	measure 'Downtime (hrs)' = SUM ( fact_service_ticket[downtime_hours] )
 		formatString: #,0
+		displayFolder: Service
 		lineageTag: 05ab0866-1196-450e-b13a-af54fbdabe75
 
+	/// Number of installed machines.
 	measure Machines = COUNTROWS ( dim_machine )
 		formatString: #,0
+		displayFolder: Machine Health
 		lineageTag: 06117da9-2ac5-4e5b-9183-4710018d8fc5
 
+	/// Number of data-quality rules.
 	measure 'DQ Rules' = COUNTROWS ( vw_data_quality_results )
-		formatString: 0
+		formatString: #,0
+		displayFolder: Data Quality
 		lineageTag: c1289e96-80c7-460a-b5ac-1a5860fe62ff
 
+	/// Rows that fail the data-quality rules.
 	measure 'DQ Failed Rows' = SUM ( vw_data_quality_results[failed_rows] )
 		formatString: #,0
+		displayFolder: Data Quality
 		lineageTag: 61b62b00-dd01-4bac-8ba9-a60b51fe5993
 
+	/// Share of rows that pass the data-quality rules.
 	measure 'DQ Pass Rate %' = DIVIDE ( SUM ( vw_data_quality_results[total_rows] ) - SUM ( vw_data_quality_results[failed_rows] ), SUM ( vw_data_quality_results[total_rows] ) )
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: Data Quality
 		lineageTag: e1e329a5-ee06-4233-9567-22d496177b07
 
+	/// Customers whose region was corrected from their country (rule DQ09).
 	measure 'Customers Region Corrected' = CALCULATE ( COUNTROWS ( dim_customer ), dim_customer[region_check] <> "OK" )
-		formatString: 0
+		formatString: #,0
+		displayFolder: Data Quality
 		lineageTag: e83777af-2f73-48bb-a3e7-c077faee6440
 
 	partition _Measures = m

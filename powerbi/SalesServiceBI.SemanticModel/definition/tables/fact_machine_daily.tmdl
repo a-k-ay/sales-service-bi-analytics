@@ -1,8 +1,10 @@
+/// Machine telemetry (one row per machine per day), cleaned.
 table fact_machine_daily
 	lineageTag: 0ba7c8aa-6ce5-40ec-a6f2-263bec74d382
 
 	column machine_id
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: f368a16e-eab5-4f68-951f-a1a738d5be5d
 		summarizeBy: none
@@ -12,7 +14,8 @@ table fact_machine_daily
 
 	column perf_date
 		dataType: dateTime
-		formatString: Long Date
+		isHidden
+		formatString: mm/dd/yyyy
 		lineageTag: cfb46f43-cd14-4b44-8e59-62abbfac3ddb
 		summarizeBy: none
 		sourceColumn: perf_date
@@ -23,8 +26,10 @@ table fact_machine_daily
 
 	column planned_hours
 		dataType: double
+		isHidden
+		isAvailableInMdx: false
 		lineageTag: 9c18b226-188d-45c9-8f8f-c3f4d6ab13fc
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: planned_hours
 
 		annotation SummarizationSetBy = Automatic
@@ -33,55 +38,65 @@ table fact_machine_daily
 
 	column run_hours
 		dataType: double
+		isHidden
+		isAvailableInMdx: false
 		lineageTag: 8f2b41b7-f3f8-4ea5-b2e9-b91e671b714f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: run_hours
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Parts per hour at full speed.
 	column ideal_rate_per_hour
 		dataType: int64
 		formatString: 0
 		lineageTag: c30f6087-70de-46ec-b27f-09030de47367
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ideal_rate_per_hour
 
 		annotation SummarizationSetBy = Automatic
 
 	column total_parts
 		dataType: int64
+		isHidden
 		formatString: 0
+		isAvailableInMdx: false
 		lineageTag: 7f9ad75f-ea5a-4b07-a310-b2bbef3044b0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: total_parts
 
 		annotation SummarizationSetBy = Automatic
 
 	column good_parts
 		dataType: int64
+		isHidden
 		formatString: 0
+		isAvailableInMdx: false
 		lineageTag: 6f380e26-e005-4d23-9172-c8681f2c4ba9
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: good_parts
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Rejected parts (total minus good).
 	column scrap_parts
 		dataType: int64
 		formatString: 0
 		lineageTag: 2007d4d8-0988-41bf-8b23-228112013650
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: scrap_parts
 
 		annotation SummarizationSetBy = Automatic
 
 	column ideal_parts
 		dataType: int64
+		isHidden
 		formatString: 0
+		isAvailableInMdx: false
 		lineageTag: 56aa2b5d-06c9-449c-b317-118ea3ac1f2b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ideal_parts
 
 		annotation SummarizationSetBy = Automatic

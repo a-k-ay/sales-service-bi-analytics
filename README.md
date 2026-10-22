@@ -184,6 +184,10 @@ Found by profiling the raw data first (see `docs/profiling_notes.md` and
 | DAX and Power BI               | 24 measures incl. YoY, YTD,               |
 |                                | USERELATIONSHIP, OEE, MTTR                |
 +--------------------------------+-------------------------------------------+
+| Tabular model best practice    | Best Practice Analyzer (Tabular Editor):  |
+|                                | 228 findings to 52; descriptions, display |
+|                                | folders; .pbix 11 MB to 5.5 MB            |
++--------------------------------+-------------------------------------------+
 | Security                       | Row-level security, one role per region   |
 +--------------------------------+-------------------------------------------+
 | Requirements and documentation | docs/requirements_spec.md, data           |

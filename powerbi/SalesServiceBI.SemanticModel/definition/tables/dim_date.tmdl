@@ -1,11 +1,13 @@
+/// Calendar 2024-2026, marked as the date table.
 table dim_date
 	lineageTag: e1679590-6429-40f9-8edb-7d0b7d05f9d3
 	dataCategory: Time
 
+	/// Calendar date; key of the date table.
 	column date
 		dataType: dateTime
 		isKey
-		formatString: Long Date
+		formatString: mm/dd/yyyy
 		lineageTag: 56d7b43f-5a4d-4530-860f-fee8ff56da58
 		summarizeBy: none
 		sourceColumn: date
@@ -14,6 +16,7 @@ table dim_date
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	/// Date as a number, yyyymmdd.
 	column date_key
 		dataType: int64
 		formatString: 0
@@ -23,6 +26,7 @@ table dim_date
 
 		annotation SummarizationSetBy = User
 
+	/// Calendar year.
 	column year
 		dataType: int64
 		formatString: 0
@@ -32,6 +36,7 @@ table dim_date
 
 		annotation SummarizationSetBy = User
 
+	/// Quarter number, 1 to 4.
 	column quarter
 		dataType: int64
 		formatString: 0
@@ -41,6 +46,7 @@ table dim_date
 
 		annotation SummarizationSetBy = User
 
+	/// Quarter label, e.g. Q1 2025.
 	column quarter_label
 		dataType: string
 		lineageTag: 24990976-2b9c-4d85-86d6-d357dcf6aee3
@@ -49,6 +55,7 @@ table dim_date
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Month number, 1 to 12.
 	column month_num
 		dataType: int64
 		formatString: 0
@@ -58,6 +65,7 @@ table dim_date
 
 		annotation SummarizationSetBy = User
 
+	/// Month label, e.g. Jan 2025 (sorted by year_month).
 	column month_label
 		dataType: string
 		lineageTag: bc68ef05-63db-4fa2-b597-18d3dd98b1c4
@@ -67,6 +75,7 @@ table dim_date
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Year and month as a number, yyyymm.
 	column year_month
 		dataType: int64
 		formatString: 0
@@ -76,6 +85,7 @@ table dim_date
 
 		annotation SummarizationSetBy = User
 
+	/// Day of the week.
 	column weekday_name
 		dataType: string
 		lineageTag: e11dfa7a-10de-4e4c-835f-a4c5ed81b403
@@ -84,6 +94,7 @@ table dim_date
 
 		annotation SummarizationSetBy = Automatic
 
+	/// 1 for Saturday or Sunday, otherwise 0.
 	column is_weekend
 		dataType: int64
 		formatString: 0

@@ -1,7 +1,7 @@
 role 'Region MEA'
 	modelPermission: read
 
-	tablePermission dim_region = [region_code] = "MEA"
+	tablePermission dim_region = dim_region[region_code] = "MEA"
 
 	annotation PBI_Id = 8cb113b336c140d1991be3f1bae097ef
 

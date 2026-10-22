@@ -1,14 +1,18 @@
+/// Sales regions.
 table dim_region
 	lineageTag: 54cdd78b-7833-4a55-85b5-ee6542776ddf
 
 	column region_code
 		dataType: string
+		isHidden
+		isKey
 		lineageTag: 925443e7-f4c9-4c1c-b000-3d526b54c4ab
 		summarizeBy: none
 		sourceColumn: region_code
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Region name, e.g. India & SAARC.
 	column region_name
 		dataType: string
 		lineageTag: 7e804892-e970-41b8-ba3f-4622e16f3550
@@ -17,6 +21,7 @@ table dim_region
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Region group: Americas, EMEA, APAC.
 	column super_region
 		dataType: string
 		lineageTag: e4f60af2-52cf-45c3-8d23-b95eb0388f37

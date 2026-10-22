@@ -1,7 +1,7 @@
 role 'Region LATAM'
 	modelPermission: read
 
-	tablePermission dim_region = [region_code] = "LATAM"
+	tablePermission dim_region = dim_region[region_code] = "LATAM"
 
 	annotation PBI_Id = 04653ead74ae4ed19b289ce847fe7eab
 

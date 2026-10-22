@@ -1,8 +1,11 @@
+/// Customers, one golden record per company after de-duplication.
 table dim_customer
 	lineageTag: f15b2a7d-813a-4a54-89da-152635b48830
 
 	column customer_id
 		dataType: int64
+		isHidden
+		isKey
 		formatString: 0
 		lineageTag: 9ad7bd2a-3461-44c2-a20e-2ba82862e2e2
 		summarizeBy: none
@@ -10,6 +13,7 @@ table dim_customer
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Customer number as shown in the ERP.
 	column customer_number
 		dataType: string
 		lineageTag: b630fb8a-c449-438c-8acb-5cedb9be7c7c
@@ -18,6 +22,7 @@ table dim_customer
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Company name.
 	column customer_name
 		dataType: string
 		lineageTag: 917f5586-792c-486a-bb74-e97ffb671879
@@ -26,6 +31,7 @@ table dim_customer
 
 		annotation SummarizationSetBy = Automatic
 
+	/// What the customer produces: Beverage, Food & Consumer, Medical.
 	column industry_segment
 		dataType: string
 		lineageTag: b4d6fc32-3766-4db2-b69b-a4b86c7c0801
@@ -34,6 +40,7 @@ table dim_customer
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Account importance: Strategic, Key, Standard, or Unassigned.
 	column account_tier
 		dataType: string
 		lineageTag: ba1a59a6-8dd7-4387-bc3d-e60c8d0ab0f8
@@ -42,9 +49,11 @@ table dim_customer
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Customer country, standardised from the country reference list.
 	column country
 		dataType: string
 		lineageTag: 7fadd014-15c8-426f-a438-e0017afa72b9
+		dataCategory: Country
 		summarizeBy: none
 		sourceColumn: country
 
@@ -52,12 +61,14 @@ table dim_customer
 
 	column region_code
 		dataType: string
+		isHidden
 		lineageTag: 4fd6258d-4885-49f4-b382-0524b52af319
 		summarizeBy: none
 		sourceColumn: region_code
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Region as typed in the ERP, before correction.
 	column source_region_code
 		dataType: string
 		lineageTag: 1655cb43-d80c-4f12-95e6-af8f10f77716
@@ -66,6 +77,7 @@ table dim_customer
 
 		annotation SummarizationSetBy = Automatic
 
+	/// OK, or 'Region corrected from country' (rule DQ09).
 	column region_check
 		dataType: string
 		lineageTag: ba22dd5a-a010-4cd6-a909-b7f3a60d22bd

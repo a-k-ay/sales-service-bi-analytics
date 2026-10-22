@@ -1,15 +1,18 @@
+/// Service tickets (one row per ticket), de-duplicated.
 table fact_service_ticket
 	lineageTag: 5c9021d8-4f49-47c7-b597-48ad25ce8545
 
+	/// Ticket ID.
 	column ticket_id
 		dataType: int64
 		formatString: 0
 		lineageTag: 5377e81d-6754-4aea-bff4-5b2161e49605
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ticket_id
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Ticket number as shown in the service system.
 	column ticket_number
 		dataType: string
 		lineageTag: 511f68c4-d83d-40d7-b4bd-8631277e7675
@@ -20,6 +23,7 @@ table fact_service_ticket
 
 	column machine_id
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 91f6dd6e-83f1-4dd7-9165-68f729f8988e
 		summarizeBy: none
@@ -29,16 +33,19 @@ table fact_service_ticket
 
 	column customer_id
 		dataType: int64
+		isHidden
 		formatString: 0
+		isAvailableInMdx: false
 		lineageTag: 4a5cd849-2a17-474b-93ad-c7369f539284
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: customer_id
 
 		annotation SummarizationSetBy = Automatic
 
 	column opened_date
 		dataType: dateTime
-		formatString: Long Date
+		isHidden
+		formatString: mm/dd/yyyy
 		lineageTag: 12eccdb7-b0a5-4296-97a2-34633fd42eaa
 		summarizeBy: none
 		sourceColumn: opened_date
@@ -47,6 +54,7 @@ table fact_service_ticket
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	/// Date and time the ticket was raised.
 	column opened_at
 		dataType: dateTime
 		formatString: General Date
@@ -56,6 +64,7 @@ table fact_service_ticket
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Date and time the ticket was solved; blank while Open.
 	column closed_at
 		dataType: dateTime
 		formatString: General Date
@@ -65,6 +74,7 @@ table fact_service_ticket
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Type of problem, e.g. Heater Failure.
 	column issue_category
 		dataType: string
 		lineageTag: 1888d832-76e2-448b-aa24-1d6894688d21
@@ -73,6 +83,7 @@ table fact_service_ticket
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Urgency: P1 (urgent) to P3 (low).
 	column priority
 		dataType: string
 		lineageTag: 2681fc8f-222b-4e1a-8d50-f88677d769d6
@@ -81,6 +92,7 @@ table fact_service_ticket
 
 		annotation SummarizationSetBy = Automatic
 
+	/// How the problem was reported, incl. Remote Monitoring Alert.
 	column channel
 		dataType: string
 		lineageTag: c7f0324e-9d3b-429e-8d0e-05b4fdc45a84
@@ -89,6 +101,7 @@ table fact_service_ticket
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Remote, Phone Support or Technician Visit.
 	column resolution_type
 		dataType: string
 		lineageTag: 9abfe81a-6096-4965-8876-2ccd0f49d8d8
@@ -97,6 +110,7 @@ table fact_service_ticket
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Open or Closed.
 	column status
 		dataType: string
 		lineageTag: 5de48627-1eab-4829-a4bd-98fe4a0838a3
@@ -107,8 +121,10 @@ table fact_service_ticket
 
 	column downtime_hours
 		dataType: double
+		isHidden
+		isAvailableInMdx: false
 		lineageTag: 42ed7778-834b-4a7c-93bf-34b9fd80eff4
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: downtime_hours
 
 		annotation SummarizationSetBy = Automatic
@@ -117,8 +133,10 @@ table fact_service_ticket
 
 	column resolution_hours
 		dataType: double
+		isHidden
+		isAvailableInMdx: false
 		lineageTag: 183e8c39-8c5a-4a26-80ea-995f3c7aa6f8
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: resolution_hours
 
 		annotation SummarizationSetBy = Automatic
