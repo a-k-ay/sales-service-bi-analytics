@@ -1,0 +1,136 @@
+table fact_service_ticket
+	lineageTag: 5c9021d8-4f49-47c7-b597-48ad25ce8545
+
+	column ticket_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5377e81d-6754-4aea-bff4-5b2161e49605
+		summarizeBy: sum
+		sourceColumn: ticket_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ticket_number
+		dataType: string
+		lineageTag: 511f68c4-d83d-40d7-b4bd-8631277e7675
+		summarizeBy: none
+		sourceColumn: ticket_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column machine_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 91f6dd6e-83f1-4dd7-9165-68f729f8988e
+		summarizeBy: none
+		sourceColumn: machine_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a5cd849-2a17-474b-93ad-c7369f539284
+		summarizeBy: sum
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column opened_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 12eccdb7-b0a5-4296-97a2-34633fd42eaa
+		summarizeBy: none
+		sourceColumn: opened_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column opened_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e3fb274f-d09e-4730-8d56-f4abcfddf379
+		summarizeBy: none
+		sourceColumn: opened_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column closed_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a25d0f77-4651-4871-99ef-84b62dba69d0
+		summarizeBy: none
+		sourceColumn: closed_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue_category
+		dataType: string
+		lineageTag: 1888d832-76e2-448b-aa24-1d6894688d21
+		summarizeBy: none
+		sourceColumn: issue_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column priority
+		dataType: string
+		lineageTag: 2681fc8f-222b-4e1a-8d50-f88677d769d6
+		summarizeBy: none
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel
+		dataType: string
+		lineageTag: c7f0324e-9d3b-429e-8d0e-05b4fdc45a84
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution_type
+		dataType: string
+		lineageTag: 9abfe81a-6096-4965-8876-2ccd0f49d8d8
+		summarizeBy: none
+		sourceColumn: resolution_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 5de48627-1eab-4829-a4bd-98fe4a0838a3
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column downtime_hours
+		dataType: double
+		lineageTag: 42ed7778-834b-4a7c-93bf-34b9fd80eff4
+		summarizeBy: sum
+		sourceColumn: downtime_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column resolution_hours
+		dataType: double
+		lineageTag: 183e8c39-8c5a-4a26-80ea-995f3c7aa6f8
+		summarizeBy: sum
+		sourceColumn: resolution_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_service_ticket = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_fact_service_ticket = Source{[Schema="bi",Item="fact_service_ticket"]}[Data]
+				in
+				    bi_fact_service_ticket
+

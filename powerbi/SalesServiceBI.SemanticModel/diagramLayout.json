@@ -1,0 +1,143 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 624,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 706.2151868125485,
+            "y": 310.30117142106417
+          },
+          "nodeIndex": "dim_customer",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1224.4344131866774,
+            "y": 356.55872519031141
+          },
+          "nodeIndex": "dim_date",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 336.75573369428275,
+            "y": 330.84634431244035
+          },
+          "nodeIndex": "dim_machine",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 487.98815336933677,
+            "y": 662.80989584889892
+          },
+          "nodeIndex": "dim_product",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 990.4344131866776,
+            "y": 216.26068253897267
+          },
+          "nodeIndex": "dim_region",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 13.712778421712756
+          },
+          "nodeIndex": "fact_machine_daily",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 797.88403323632247,
+            "y": 663.11745038062259
+          },
+          "nodeIndex": "fact_sales",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 467.25809996659422,
+            "y": -50
+          },
+          "nodeIndex": "fact_service_ticket",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1458.4344131866774,
+            "y": 394.55872519031129
+          },
+          "nodeIndex": "vw_data_quality_results",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1692.4344131866774,
+            "y": 454.55872519031129
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "b319fb0f-3a20-4be2-b57a-72a79bcac1cb",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

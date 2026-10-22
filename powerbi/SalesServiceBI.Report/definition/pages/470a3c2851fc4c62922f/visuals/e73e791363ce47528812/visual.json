@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "e73e791363ce47528812",
+  "position": {
+    "x": 20,
+    "y": 8,
+    "z": 0,
+    "height": 74,
+    "width": 1480,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Machine Health",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "22pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Do remotely monitored machines run better?  OEE = Availability x Performance x Quality (telemetry from Jan 2025)",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#605E5C"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

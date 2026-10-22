@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "80a2a1bf9f674f678bce",
+  "position": {
+    "x": 1156.4,
+    "y": 95,
+    "z": 6,
+    "height": 135,
+    "width": 364.8,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Downtime (hrs)"
+                }
+              },
+              "queryRef": "_Measures.Downtime (hrs)",
+              "nativeQueryRef": "Downtime (hrs)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

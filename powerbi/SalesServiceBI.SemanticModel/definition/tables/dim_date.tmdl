@@ -1,0 +1,104 @@
+table dim_date
+	lineageTag: e1679590-6429-40f9-8edb-7d0b7d05f9d3
+	dataCategory: Time
+
+	column date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: 56d7b43f-5a4d-4530-860f-fee8ff56da58
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a1af150-932f-49df-b661-8d81bdbbd9bc
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = User
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 7eac244a-a438-43ac-8118-ecf229f3adc2
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = User
+
+	column quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 08bbfb1f-0a64-48b8-9f37-0db763d15121
+		summarizeBy: none
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = User
+
+	column quarter_label
+		dataType: string
+		lineageTag: 24990976-2b9c-4d85-86d6-d357dcf6aee3
+		summarizeBy: none
+		sourceColumn: quarter_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_num
+		dataType: int64
+		formatString: 0
+		lineageTag: 260ff0bc-958b-4ada-9e5f-f962a3eabda6
+		summarizeBy: none
+		sourceColumn: month_num
+
+		annotation SummarizationSetBy = User
+
+	column month_label
+		dataType: string
+		lineageTag: bc68ef05-63db-4fa2-b597-18d3dd98b1c4
+		summarizeBy: none
+		sourceColumn: month_label
+		sortByColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e005d54-6bca-41da-b0cc-0e817fc7780e
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = User
+
+	column weekday_name
+		dataType: string
+		lineageTag: e11dfa7a-10de-4e4c-835f-a4c5ed81b403
+		summarizeBy: none
+		sourceColumn: weekday_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekend
+		dataType: int64
+		formatString: 0
+		lineageTag: 0224f391-b14d-456b-9992-90624b5fe082
+		summarizeBy: none
+		sourceColumn: is_weekend
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_dim_date = Source{[Schema="bi",Item="dim_date"]}[Data]
+				in
+				    bi_dim_date
+

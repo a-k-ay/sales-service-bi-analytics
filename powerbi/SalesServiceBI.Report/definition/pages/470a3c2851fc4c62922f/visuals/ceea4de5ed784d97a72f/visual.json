@@ -1,0 +1,147 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ceea4de5ed784d97a72f",
+  "position": {
+    "x": 1200,
+    "y": 670,
+    "z": 11,
+    "height": 395,
+    "width": 700,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_machine"
+                    }
+                  },
+                  "Property": "monitoring_tier"
+                }
+              },
+              "queryRef": "dim_machine.monitoring_tier",
+              "nativeQueryRef": "monitoring_tier"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Machines"
+                }
+              },
+              "queryRef": "_Measures.Machines",
+              "nativeQueryRef": "Machines"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "OEE"
+                }
+              },
+              "queryRef": "_Measures.OEE",
+              "nativeQueryRef": "OEE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Availability"
+                }
+              },
+              "queryRef": "_Measures.Availability",
+              "nativeQueryRef": "Availability"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Performance"
+                }
+              },
+              "queryRef": "_Measures.Performance",
+              "nativeQueryRef": "Performance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Quality"
+                }
+              },
+              "queryRef": "_Measures.Quality",
+              "nativeQueryRef": "Quality"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_machine"
+                  }
+                },
+                "Property": "monitoring_tier"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Summary by tier'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

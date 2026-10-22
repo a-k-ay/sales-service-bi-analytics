@@ -1,0 +1,327 @@
+customer_id,customer_number,customer_name,industry_segment,account_tier,country,region_code,created_date
+1,C100001,Delta Packaging Pvt Ltd,Medical,Standard,United Kingdom,EU,2021-04-03
+2,C100002,Evergreen Healthcare Inc,Beverage,Key,Saudi Arabia,MEA,2016-05-31
+3,C100003,River Beverages Co.,Medical,Standard,Mexico,NA,2023-08-24
+4,C100004,Crystal Polymers S.A.,Beverage,Standard,India,IND,2018-05-03
+5,C100005,River Polymers PLC,Beverage,Key,Thailand,SEA,2019-04-19
+6,C100006,Orion Pack Solutions Pvt Ltd,Beverage,Standard,Argentina,LATAM,2014-12-04
+7,C100007,Falcon Healthcare Co.,Beverage,Standard,Germany,EU,2020-03-09
+8,C100008,Evergreen Polymers LLC,Beverage,Key,UAE,NA,2022-11-09
+9,C100009,Meridian Beverages LLC,Food & Consumer,Key,Germany,EU,2014-07-01
+10,C100010,Terra Bottling Ltd,Food & Consumer,Strategic,Egypt,MEA,2015-10-27
+11,C100011,Crystal Industries Pvt Ltd,Beverage,Strategic,South Africa,MEA,2014-09-13
+12,C100012,Terra Closures S.A.,Medical,Standard,South Korea,CNA,2016-02-07
+13,C100013,Blue Foods S.A.,Beverage,Standard,Germany,EU,2015-05-02
+14,C100014,Crystal Polymers Inc,Beverage,Standard,Italy,EU,2019-09-28
+15,C100015,Orion Foods LLC,Medical,Key,United States,NA,2022-03-06
+16,C100016,Lotus Polymers Pvt Ltd,Beverage,Standard,Sri Lanka,IND,2016-02-18
+17,C100017,Terra Foods GmbH,Beverage,Standard,United Arab Emirates,MEA,2018-01-05
+18,C100018,Falcon Containers Co.,Medical,Standard,Vietnam,SEA,2020-12-22
+19,C100019,Horizon Foods LLC,Medical,Strategic,Nigeria,MEA,2014-07-20
+20,C100020,Horizon Packaging LLC,Beverage,Key,Brazil,LATAM,2019-07-03
+21,C100021,Crystal Polymers LLC,Beverage,Standard,Italy,EU,2021-08-14
+22,C100022,Pacific MedTech SpA,Beverage,Standard,United Kingdom,EU,2022-05-26
+23,C100023,Evergreen Polymers PLC,Medical,Strategic,United States,NA,2017-12-16
+24,C100024,Zenith Pack Solutions Co.,Food & Consumer,Key,Japan,CNA,2017-06-16
+25,C100025,Lotus Polymers GmbH,Medical,Standard,United States,NA,2018-04-15
+26,C100026,Crystal Packaging Inc,Food & Consumer,Strategic,Pakistan,IND,2022-04-15
+27,C100027,Falcon Foods Co.,Beverage,Standard,United Kingdom,EU,2017-04-25
+28,C100028,Meridian MedTech SpA,Beverage,Strategic,India,IND,2018-01-25
+29,C100029,River Packaging Inc,Beverage,Standard,Italy,EU,2016-05-10
+30,C100030,Unity Closures Inc,Medical,Standard,Sri Lanka,IND,2020-09-16
+31,C100031,Falcon Containers Ltd,Food & Consumer,Standard,United States,NA,2015-11-27
+32,C100032,Quantum Plastics PLC,Food & Consumer,,Egypt,MEA,2022-10-23
+33,C100033,Unity Industries S.A.,Beverage,Strategic,Egypt,MEA,2022-04-15
+34,C100034,Falcon Industries PLC,Beverage,Standard,United States,NA,2023-12-30
+35,C100035,Kestrel Containers Ltd,Food & Consumer,Standard,Spain,EU,2022-09-30
+36,C100036,Jade Polymers Ltd,Beverage,Standard,Colombia,LATAM,2021-04-20
+37,C100037,Crystal Healthcare SpA,Beverage,Key,Brazil,LATAM,2014-11-07
+38,C100038,River Plastics GmbH,Medical,Standard,Brazil,LATAM,2016-08-08
+39,C100039,River Plastics Pvt Ltd,Medical,Standard,Pakistan,IND,2018-01-31
+40,C100040,Golden Industries S.A.,Medical,Standard,Chile,LATAM,2016-01-03
+41,C100041,Meridian Foods LLC,Medical,Key,Indonesia,SEA,2019-02-02
+42,C100042,Orion Beverages S.A.,Beverage,Standard,Mexico,NA,2021-06-25
+43,C100043,Kestrel Packaging PLC,Medical,Strategic,Thailand,SEA,2021-06-03
+44,C100044,Horizon Packaging Inc,Beverage,Key,Nigeria,MEA,2016-01-24
+45,C100045,Blue Polymers Inc,Beverage,Standard,Mexico,NA,2023-08-26
+46,C100046,Crystal Industries S.A.,Food & Consumer,Standard,Italy,EU,2020-11-17
+47,C100047,Pacific Polymers PLC,Medical,Standard,United Kingdom,EU,2022-07-09
+48,C100048,Horizon Containers Co.,Beverage,Key,Chile,LATAM,2021-11-13
+49,C100049,Delta Foods Co.,Beverage,Standard,Germany,EU,2020-01-11
+50,C100050,Nova Containers Ltd,Beverage,Key,South Africa,MEA,2016-06-13
+51,C100051,Unity Beverages Ltd,Beverage,Key,South Korea,CNA,2019-06-27
+52,C100052,Delta Polymers S.A.,Medical,Key,Egypt,MEA,2021-11-13
+53,C100053,Evergreen MedTech GmbH,Food & Consumer,Key,Pakistan,IND,2020-11-17
+54,C100054,Horizon Beverages SpA,Beverage,Standard,Pakistan,IND,2014-12-10
+55,C100055,Blue Foods PLC,Food & Consumer,Strategic,India,IND,2014-08-17
+56,C100056,Crystal Polymers GmbH,Beverage,Key,Thailand,SEA,2019-06-12
+57,C100057,Pacific Polymers Co.,Food & Consumer,Standard,United States,NA,2023-05-06
+58,C100058,Meridian Packaging Co.,Food & Consumer,Key,Canada,NA,2021-01-10
+59,C100059,Jade MedTech PLC,Beverage,Standard,Pakistan,IND,2016-07-30
+60,C100060,Pacific Plastics S.A.,Medical,Key,United Kingdom,EU,2020-09-03
+61,C100061,Blue Pack Solutions PLC,Beverage,Standard,France,EU,2023-04-27
+62,C100062,Blue Packaging SpA,Beverage,Standard,Indonesia,SEA,2018-05-13
+63,C100063,Blue Industries Inc,Food & Consumer,Standard,Vietnam,SEA,2014-06-15
+64,C100064,Crystal Pack Solutions Inc,Beverage,Standard,Argentina,LATAM,2016-06-06
+65,C100065,Meridian Beverages S.A.,Food & Consumer,Key,China,CNA,2017-07-05
+66,C100066,Blue Pack Solutions Inc,Food & Consumer,Standard,UK,EU,2019-04-20
+67,C100067,Summit Pack Solutions PLC,Food & Consumer,,South Korea,CNA,2020-06-15
+68,C100068,Golden Foods LLC,Beverage,Standard,United States,NA,2021-04-29
+69,C100069,Meridian Plastics Pvt Ltd,Beverage,Key,Egypt,MEA,2018-11-16
+70,C100070,Crystal Packaging SpA,Beverage,Key,Sri Lanka,IND,2017-01-13
+71,C100071,Delta Beverages PLC,Food & Consumer,Standard,Nigeria,MEA,2021-08-11
+72,C100072,Evergreen Closures Inc,Food & Consumer,Key,Colombia,LATAM,2014-02-21
+73,C100073,Lotus Bottling GmbH,Food & Consumer,Standard,France,EU,2019-02-02
+74,C100074,Terra Foods PLC,Food & Consumer,Standard,Indonesia,SEA,2023-11-30
+75,C100075,River Bottling Inc,Beverage,Key,Mexico,NA,2014-02-26
+76,C100076,Indus Beverages Inc,Medical,Key,Argentina,LATAM,2015-09-05
+77,C100077,Evergreen Bottling Pvt Ltd,Food & Consumer,Standard,South Korea,CNA,2017-03-21
+78,C100078,Willow Closures S.A.,Food & Consumer,Standard,Saudi Arabia,MEA,2016-04-17
+79,C100079,Quantum Containers Pvt Ltd,Food & Consumer,Key,Colombia,LATAM,2014-07-07
+80,C100080,Crystal Foods Co.,Food & Consumer,Key,Canada,NA,2014-09-13
+81,C100081,Blue Packaging LLC,Medical,Standard,Japan,CNA,2015-05-10
+82,C100082,Unity Bottling GmbH,Beverage,Standard,France,EU,2015-09-09
+83,C100083,River Healthcare Co.,Medical,Standard,Poland,EU,2017-09-17
+84,C100084,Delta Beverages GmbH,Beverage,Key,Thailand,SEA,2017-11-19
+85,C100085,Lotus Pack Solutions PLC,Beverage,Key,Thailand,SEA,2022-05-05
+86,C100086,Evergreen Packaging Pvt Ltd,Medical,Standard,South Africa,MEA,2019-11-30
+87,C100087,Lotus Polymers S.A.,Beverage,Standard,United Arab Emirates,MEA,2016-07-10
+88,C100088,Lotus Industries Co.,Beverage,Standard,China,CNA,2017-01-15
+89,C100089,Horizon Plastics GmbH,Food & Consumer,Standard,Vietnam,SEA,2014-02-12
+90,C100090,Aqua Plastics LLC,Beverage,Key,Pakistan,IND,2015-03-25
+91,C100091,Vertex Healthcare S.A.,Medical,Standard,Philippines,SEA,2021-01-04
+92,C100092,Willow Beverages Co.,Food & Consumer,Standard,China,CNA,2014-03-22
+93,C100093,Pacific Polymers S.A.,Food & Consumer,Standard,Thailand,SEA,2014-11-05
+94,C100094,Lotus Bottling S.A.,Medical,Key,Philippines,SEA,2021-07-02
+95,C100095,Vertex Polymers Co.,Beverage,Standard,Germany,EU,2020-04-27
+96,C100096,Crystal Bottling LLC,Beverage,Standard,United States,NA,2016-10-22
+97,C100097,Meridian Foods PLC,Food & Consumer,Strategic,Spain,EU,2020-04-15
+98,C100098,Delta Bottling GmbH,Medical,Key,Canada,NA,2017-06-28
+99,C100099,Blue Beverages Co.,Food & Consumer,Standard,United States,NA,2020-02-16
+100,C100100,Nova Pack Solutions PLC,Food & Consumer,Strategic,Colombia,LATAM,2022-09-15
+101,C100101,Summit Polymers Pvt Ltd,Food & Consumer,Standard,United States,NA,2023-07-04
+102,C100102,Aqua Industries PLC,Food & Consumer,Standard,Pakistan,IND,2016-04-19
+103,C100103,Lotus MedTech Inc,Beverage,Standard,Saudi Arabia,MEA,2016-07-21
+104,C100104,Terra Closures Inc,Beverage,Strategic,Colombia,LATAM,2015-12-06
+105,C100105,Quantum Bottling Co.,Medical,Standard,United States,NA,2020-05-05
+106,C100106,Willow Bottling PLC,Beverage,Key,Pakistan,IND,2022-07-29
+107,C100107,Nova Foods Co.,Beverage,Standard,Canada,NA,2016-05-28
+108,C100108,Terra Pack Solutions Pvt Ltd,Food & Consumer,Key,Bangladesh,IND,2019-06-13
+109,C100109,Aqua Bottling Pvt Ltd,Food & Consumer,Standard,South Korea,CNA,2021-08-24
+110,C100110,Summit Pack Solutions LLC,Beverage,Key,South Africa,MEA,2018-10-15
+111,C100111,Orion Foods S.A.,Food & Consumer,Strategic,Poland,EU,2018-04-09
+112,C100112,Zenith Plastics Inc,Beverage,Strategic,United States,NA,2020-10-26
+113,C100113,Crystal Polymers Pvt Ltd,Food & Consumer,Standard,Indonesia,SEA,2021-06-25
+114,C100114,Evergreen Packaging Ltd,Beverage,Standard,Canada,NA,2021-04-04
+115,C100115,Terra Beverages SpA,Beverage,Key,Chile,LATAM,2019-05-10
+116,C100116,Golden Healthcare Co.,Food & Consumer,Strategic,Nigeria,MEA,2018-06-17
+117,C100117,Horizon Plastics Ltd,Food & Consumer,Standard,Poland,EU,2015-08-01
+118,C100118,Nova Polymers GmbH,Food & Consumer,Key,Thailand,SEA,2014-12-26
+119,C100119,Quantum Containers Ltd,Food & Consumer,Strategic,Mexico,NA,2017-10-01
+120,C100120,Delta Containers GmbH,Medical,Standard,Saudi Arabia,MEA,2015-01-06
+121,C100121,Vertex Industries PLC,Food & Consumer,Standard,Poland,EU,2017-04-29
+122,C100122,Orion Pack Solutions PLC,Medical,Key,Egypt,MEA,2019-03-21
+123,C100123,Orion Plastics SpA,Medical,Key,South Korea,CNA,2018-12-15
+124,C100124,Horizon Foods Pvt Ltd,Beverage,Strategic,United States,NA,2015-06-01
+125,C100125,Pacific Foods S.A.,Food & Consumer,Strategic,Mexico,NA,2020-12-03
+126,C100126,Crystal Healthcare Pvt Ltd,Medical,Strategic,Poland,EU,2021-05-16
+127,C100127,Kestrel Closures PLC,Beverage,Key,Indonesia,SEA,2023-02-05
+128,C100128,Evergreen Polymers Co.,Food & Consumer,Standard,Deutschland,IND,2016-03-21
+129,C100129,Willow Polymers Inc,Medical,Key,Bangladesh,IND,2019-05-08
+130,C100130,Kestrel Industries SpA,Food & Consumer,Standard,Chile,LATAM,2019-05-04
+131,C100131,Golden MedTech Co.,Beverage,Key,China,CNA,2015-05-15
+132,C100132,Summit MedTech SpA,Beverage,Standard,Thailand,SEA,2023-12-08
+133,C100133,Jade MedTech Co.,Beverage,Standard,Indonesia,SEA,2017-12-19
+134,C100134,Pacific Polymers Pvt Ltd,Beverage,Standard,Bangladesh,IND,2019-02-11
+135,C100135,Aqua MedTech LLC,Medical,Key,South Africa,MEA,2016-07-02
+136,C100136,Meridian Healthcare GmbH,Beverage,Strategic,South Korea,CNA,2014-07-30
+137,C100137,Evergreen Pack Solutions PLC,Beverage,Key,Japan,CNA,2023-09-13
+138,C100138,Summit Pack Solutions Ltd,Medical,Standard,Japan,CNA,2023-01-23
+139,C100139,Evergreen Containers GmbH,Beverage,Key,Pakistan,IND,2023-06-10
+140,C100140,Meridian Closures S.A.,Food & Consumer,Standard,Italy,EU,2018-11-26
+141,C100141,Kestrel MedTech Pvt Ltd,Food & Consumer,Strategic,Indonesia,SEA,2015-07-27
+142,C100142,Indus Beverages SpA,Beverage,Standard,South Africa,MEA,2023-10-14
+143,C100143,River Packaging LLC,Medical,Key,United Kingdom,EU,2021-06-27
+144,C100144,Crystal Foods Ltd,Beverage,Standard,Mexico,NA,2015-07-18
+145,C100145,Horizon Polymers Ltd,Beverage,Strategic,United Arab Emirates,MEA,2017-01-13
+146,C100146,Horizon Plastics SpA,Beverage,Standard,Bangladesh,IND,2016-06-29
+147,C100147,Summit Polymers SpA,Beverage,Strategic,India,IND,2016-02-27
+148,C100148,Lotus Plastics Inc,Beverage,Key,Japan,CNA,2015-04-13
+149,C100149,Jade Beverages Ltd,Medical,Standard,Vietnam,SEA,2020-07-03
+150,C100150,Meridian Healthcare S.A.,Beverage,Strategic,Pakistan,IND,2023-02-24
+151,C100151,Delta Healthcare Pvt Ltd,Food & Consumer,Standard,Vietnam,SEA,2014-06-20
+152,C100152,Terra Beverages Ltd,Beverage,Standard,South Korea,CNA,2020-02-09
+153,C100153,Nova Foods LLC,Beverage,Strategic,Mexico,NA,2023-03-25
+154,C100154,Unity Closures Ltd,Beverage,Standard,Mexico,NA,2014-06-23
+155,C100155,Pacific Beverages Co.,Food & Consumer,Standard,Pakistan,IND,2019-12-10
+156,C100156,Orion Healthcare GmbH,Beverage,Standard,United Kingdom,EU,2019-02-13
+157,C100157,Zenith Industries Pvt Ltd,Medical,Strategic,Argentina,LATAM,2017-02-04
+158,C100158,Pacific Containers Co.,Beverage,Standard,South Korea,CNA,2014-09-28
+159,C100159,Indus Closures S.A.,Medical,Strategic,Nigeria,MEA,2014-09-08
+160,C100160,Indus Containers S.A.,Medical,Standard,United Arab Emirates,MEA,2015-08-03
+161,C100161,Summit Pack Solutions Co.,Food & Consumer,Standard,Pakistan,IND,2020-03-25
+162,C100162,Pacific Closures GmbH,Food & Consumer,Standard,India,IND,2018-07-14
+163,C100163,Lotus Bottling LLC,Beverage,Standard,Canada,NA,2020-11-12
+164,C100164,Aqua Industries S.A.,Beverage,Standard,South Korea,CNA,2023-01-16
+165,C100165,Zenith MedTech SpA,Beverage,,Argentina,LATAM,2017-10-10
+166,C100166,Willow Containers SpA,Food & Consumer,Strategic,France,EU,2018-12-23
+167,C100167,Crystal Bottling S.A.,Medical,Standard,China,CNA,2019-06-20
+168,C100168,Jade Foods LLC,Beverage,Standard,Saudi Arabia,MEA,2018-09-11
+169,C100169,Nova Healthcare PLC,Beverage,Standard,Sri Lanka,IND,2020-04-17
+170,C100170,Willow Containers Pvt Ltd,Medical,Standard,Indonesia,SEA,2020-07-25
+171,C100171,Horizon Beverages S.A.,Beverage,Standard,Egypt,MEA,2020-06-18
+172,C100172,Zenith Industries GmbH,Beverage,Strategic,Thailand,SEA,2021-11-08
+173,C100173,Zenith Containers Pvt Ltd,Medical,Standard,France,EU,2015-11-17
+174,C100174,Quantum Pack Solutions Pvt Ltd,Food & Consumer,Key,Mexico,NA,2022-11-16
+175,C100175,Jade Polymers LLC,Medical,Standard,China,CNA,2021-12-28
+176,C100176,Aqua Healthcare PLC,Beverage,Key,Italy,EU,2022-08-01
+177,C100177,Blue Packaging PLC,Medical,Standard,United States,NA,2020-09-22
+178,C100178,Evergreen Foods SpA,Medical,Standard,South Korea,CNA,2022-11-07
+179,C100179,Summit Bottling SpA,Medical,Standard,Thailand,SEA,2018-08-20
+180,C100180,Kestrel Plastics Ltd,Beverage,Key,Chile,LATAM,2021-03-03
+181,C100181,Delta Beverages Co.,Food & Consumer,Key,Japan,CNA,2018-06-27
+182,C100182,Summit Foods Ltd,Food & Consumer,Key,India,IND,2022-04-20
+183,C100183,Summit Bottling Inc,Food & Consumer,Standard,Canada,NA,2021-03-21
+184,C100184,River MedTech S.A.,Food & Consumer,Standard,Thailand,SEA,2015-04-21
+185,C100185,Meridian Containers SpA,Food & Consumer,Standard,Nigeria,MEA,2020-09-01
+186,C100186,Nova Bottling Ltd,Beverage,Strategic,Spain,EU,2017-03-01
+187,C100187,Golden Foods S.A.,Food & Consumer,Standard,India,IND,2021-01-13
+188,C100188,Falcon Polymers GmbH,Beverage,Strategic,Brazil,LATAM,2017-10-24
+189,C100189,Falcon Packaging Co.,Food & Consumer,Key,Germany,EU,2018-12-13
+190,C100190,Terra Containers Pvt Ltd,Medical,Key,United Kingdom,EU,2023-08-21
+191,C100191,Jade Healthcare Pvt Ltd,Food & Consumer,Key,KSA,MEA,2016-02-13
+192,C100192,Crystal Foods S.A.,Medical,Standard,Pakistan,IND,2021-01-13
+193,C100193,Summit Foods S.A.,Medical,Standard,Mexico,NA,2019-03-27
+194,C100194,River Polymers GmbH,Beverage,Standard,Brazil,LATAM,2021-01-08
+195,C100195,Crystal Packaging GmbH,Beverage,Standard,Saudi Arabia,MEA,2015-02-11
+196,C100196,Terra Healthcare Pvt Ltd,Beverage,Key,Colombia,LATAM,2019-01-29
+197,C100197,Orion Healthcare Pvt Ltd,Beverage,Key,Canada,NA,2016-02-26
+198,C100198,Indus Industries PLC,Beverage,Key,Pakistan,IND,2018-06-19
+199,C100199,Crystal Pack Solutions Ltd,Beverage,Standard,Japan,CNA,2014-01-10
+200,C100200,Zenith Closures Pvt Ltd,Beverage,Strategic,Chile,LATAM,2023-09-18
+201,C100201,Horizon Foods Ltd,Beverage,Key,Brazil,LATAM,2015-06-05
+202,C100202,Indus Pack Solutions Ltd,Beverage,Standard,Mexico,NA,2015-06-12
+203,C100203,Pacific Industries SpA,Beverage,Standard,Argentina,LATAM,2020-11-18
+204,C100204,Crystal Containers LLC,Beverage,Standard,Bangladesh,IND,2019-06-04
+205,C100205,Kestrel Foods Inc,Beverage,Standard,Sri Lanka,IND,2014-05-20
+206,C100206,Kestrel MedTech SpA,Beverage,Key,China,CNA,2020-10-08
+207,C100207,River Packaging SpA,Food & Consumer,Key,Philippines,SEA,2023-01-06
+208,C100208,Indus Closures Inc,Beverage,Standard,Colombia,LATAM,2015-05-04
+209,C100209,Quantum Packaging PLC,Beverage,Standard,South Africa,MEA,2018-10-27
+210,C100210,Blue Polymers PLC,Beverage,Key,Pakistan,IND,2019-12-12
+211,C100211,Unity Containers Ltd,Medical,Standard,Pakistan,IND,2021-09-20
+212,C100212,Orion Healthcare SpA,Beverage,Standard,Egypt,MEA,2022-08-22
+213,C100213,Unity Pack Solutions S.A.,Beverage,Key,United Arab Emirates,MEA,2016-01-16
+214,C100214,Jade Industries Ltd,Beverage,Key,France,EU,2017-10-22
+215,C100215,Orion Beverages GmbH,Beverage,Key,Chile,LATAM,2018-05-31
+216,C100216,Jade Industries Pvt Ltd,Food & Consumer,Standard,South Korea,CNA,2019-05-06
+217,C100217,Pacific Polymers SpA,Beverage,Strategic,Philippines,SEA,2017-10-27
+218,C100218,Meridian Polymers PLC,Food & Consumer,Standard,Saudi Arabia,MEA,2015-08-20
+219,C100219,Crystal Bottling Co.,Beverage,Key,France,EU,2020-03-10
+220,C100220,Indus Packaging Pvt Ltd,Food & Consumer,Standard,Spain,EU,2015-11-11
+221,C100221,Summit Pack Solutions SpA,Medical,Standard,Italy,EU,2014-04-19
+222,C100222,Orion Industries SpA,Beverage,,Argentina,LATAM,2020-02-18
+223,C100223,River Industries Co.,Beverage,Key,Colombia,LATAM,2018-11-23
+224,C100224,Golden Healthcare S.A.,Beverage,Standard,Italy,EU,2017-08-03
+225,C100225,Horizon MedTech Ltd,Food & Consumer,Standard,United States,NA,2020-06-07
+226,C100226,Pacific Healthcare Co.,Beverage,Key,South Korea,CNA,2019-09-03
+227,C100227,Unity Plastics SpA,Medical,Standard,South Korea,CNA,2023-08-03
+228,C100228,Quantum Pack Solutions LLC,Beverage,Standard,Argentina,LATAM,2014-04-01
+229,C100229,Orion Beverages PLC,Food & Consumer,Standard,China,CNA,2018-11-17
+230,C100230,Zenith Plastics Co.,Food & Consumer,Key,Brazil,LATAM,2014-03-27
+231,C100231,Evergreen Beverages SpA,Beverage,Standard,United Kingdom,EU,2015-03-28
+232,C100232,Kestrel Pack Solutions Co.,Beverage,Standard,Colombia,LATAM,2016-09-18
+233,C100233,Kestrel Foods PLC,Food & Consumer,Key,Germany,EU,2019-09-28
+234,C100234,Unity Healthcare SpA,Food & Consumer,Strategic,Egypt,MEA,2014-03-21
+235,C100235,Horizon Healthcare Inc,Beverage,Strategic,Spain,EU,2019-02-19
+236,C100236,Unity Healthcare Inc,Beverage,Standard,China,CNA,2019-01-10
+237,C100237,Willow Bottling Ltd,Food & Consumer,Standard,Argentina,LATAM,2023-06-27
+238,C100238,Blue Bottling LLC,Beverage,Standard,Egypt,MEA,2019-10-19
+239,C100239,Nova Pack Solutions GmbH,Medical,Standard,Poland,EU,2022-02-04
+240,C100240,Crystal Pack Solutions Co.,Beverage,Standard,China,CNA,2017-01-19
+241,C100241,Horizon Containers GmbH,Beverage,Strategic,South Korea,CNA,2021-05-25
+242,C100242,Unity Bottling SpA,Food & Consumer,Standard,Pakistan,IND,2021-02-20
+243,C100243,Aqua Containers Pvt Ltd,Food & Consumer,Key,Mexico,NA,2016-05-27
+244,C100244,Summit Bottling Co.,Beverage,Standard,Argentina,LATAM,2016-04-05
+245,C100245,Orion Bottling S.A.,Food & Consumer,Key,Sri Lanka,IND,2019-09-09
+246,C100246,Delta Polymers Co.,Beverage,Standard,Philippines,SEA,2017-08-03
+247,C100247,Summit Bottling Pvt Ltd,Beverage,Standard,Italy,EU,2023-10-04
+248,C100248,Meridian Bottling Ltd,Food & Consumer,Standard,United Kingdom,EU,2017-08-27
+249,C100249,Terra Healthcare SpA,Medical,Key,Brazil,LATAM,2014-08-30
+250,C100250,Horizon Pack Solutions LLC,Medical,Standard,Egypt,MEA,2021-07-18
+251,C100251,Golden Pack Solutions Pvt Ltd,Medical,Standard,Mexico,NA,2016-05-26
+252,C100252,Vertex Foods GmbH,Beverage,Standard,United Kingdom,EU,2016-12-15
+253,C100253,Unity Foods Ltd,Food & Consumer,Standard,India,IND,2020-07-15
+254,C100254,Blue Pack Solutions LLC,Beverage,Key,Philippines,SEA,2015-10-16
+255,C100255,Zenith MedTech GmbH,Food & Consumer,Strategic,Argentina,LATAM,2021-10-01
+256,C100256,River Closures PLC,Food & Consumer,Standard,Saudi Arabia,MEA,2018-05-17
+257,C100257,Falcon Bottling SpA,Medical,Key,Viet Nam,EU,2014-12-16
+258,C100258,Zenith Closures Inc,Beverage,Key,Indonesia,SEA,2018-10-01
+259,C100259,River Closures Inc,Beverage,Key,Thailand,SEA,2015-02-19
+260,C100260,Aqua Bottling PLC,Food & Consumer,Standard,Pakistan,IND,2022-08-13
+261,C100261,Lotus Foods Pvt Ltd,Food & Consumer,Key,Pakistan,IND,2017-06-12
+262,C100262,Vertex Polymers SpA,Beverage,Standard,Poland,EU,2023-09-21
+263,C100263,River Closures S.A.,Beverage,Standard,Nigeria,MEA,2016-09-27
+264,C100264,Unity Containers Pvt Ltd,Beverage,Standard,China,CNA,2016-09-20
+265,C100265,Delta Plastics Ltd,Food & Consumer,Strategic,South Africa,MEA,2023-08-02
+266,C100266,Pacific Beverages Inc,Medical,Standard,Indonesia,SEA,2021-05-15
+267,C100267,Meridian Containers LLC,Medical,Standard,Bangladesh,IND,2016-06-25
+268,C100268,Willow Industries Co.,Food & Consumer,Standard,Mexico,NA,2017-06-01
+269,C100269,Unity Beverages SpA,Food & Consumer,Standard,United Kingdom,EU,2017-02-05
+270,C100270,Indus Packaging LLC,Beverage,Key,Japan,CNA,2021-07-26
+271,C100271,Orion Polymers LLC,Medical,Key,Japan,CNA,2022-11-21
+272,C100272,Lotus Industries LLC,Medical,Standard,South Korea,CNA,2023-04-28
+273,C100273,Indus Polymers Inc,Beverage,Strategic,South Africa,MEA,2014-06-29
+274,C100274,Blue Closures S.A.,Medical,Strategic,Poland,EU,2022-08-04
+275,C100275,Golden Beverages PLC,Beverage,Standard,Spain,EU,2021-09-05
+276,C100276,Golden Polymers LLC,Beverage,Key,South Korea,CNA,2015-04-27
+277,C100277,Terra Packaging Pvt Ltd,Beverage,Key,Bangladesh,IND,2014-05-17
+278,C100278,Evergreen Industries Pvt Ltd,Beverage,Key,France,EU,2015-01-18
+279,C100279,Delta Foods Ltd,Beverage,Standard,Saudi Arabia,MEA,2022-07-11
+280,C100280,Lotus Polymers LLC,Food & Consumer,Standard,Germany,EU,2023-10-29
+281,C100281,Indus Packaging GmbH,Food & Consumer,Key,Canada,NA,2015-09-07
+282,C100282,Quantum Beverages Inc,Beverage,Standard,Japan,CNA,2018-08-30
+283,C100283,Lotus Industries Inc,Medical,Standard,United States,NA,2018-12-07
+284,C100284,Horizon Pack Solutions Ltd,Beverage,Standard,Nigeria,MEA,2015-11-06
+285,C100285,Orion Foods Ltd,Medical,Key,Colombia,LATAM,2023-04-27
+286,C100286,Meridian MedTech Inc,Beverage,Standard,Chile,LATAM,2018-07-03
+287,C100287,Crystal Beverages LLC,Beverage,Standard,South Africa,MEA,2017-03-07
+288,C100288,Crystal Plastics Pvt Ltd,Food & Consumer,Standard,France,EU,2016-12-31
+289,C100289,Summit Industries LLC,Food & Consumer,Key,United Kingdom,EU,2019-09-24
+290,C100290,Orion Industries Co.,Medical,Standard,Colombia,LATAM,2022-11-21
+291,C100291,Delta Foods PLC,Beverage,Standard,United Kingdom,EU,2015-12-02
+292,C100292,Nova Containers S.A.,Beverage,Key,France,EU,2019-05-13
+293,C100293,Orion MedTech Co.,Food & Consumer,Strategic,Sri Lanka,IND,2015-10-27
+294,C100294,Kestrel MedTech LLC,Beverage,Standard,Brazil,LATAM,2016-07-17
+295,C100295,Lotus Plastics SpA,Beverage,Standard,United States,NA,2023-04-02
+296,C100296,Crystal Beverages Co.,Food & Consumer,Key,Brazil,LATAM,2022-12-02
+297,C100297,Zenith Closures GmbH,Beverage,Standard,Mexico,NA,2017-10-06
+298,C100298,Summit Industries PLC,Medical,Key,Thailand,SEA,2020-04-21
+299,C100299,Nova Closures Co.,Beverage,Key,India,IND,2014-04-08
+300,C100300,Blue Bottling Pvt Ltd,Beverage,Strategic,South Korea,CNA,2020-01-22
+301,C100301,Summit Industries S.A.,Beverage,Key,Brazil,LATAM,2022-04-08
+302,C100302,Horizon Beverages LLC,Beverage,Standard,South Africa,MEA,2014-07-10
+303,C100303,Delta Bottling S.A.,Beverage,Key,Indonesia,SEA,2014-12-13
+304,C100304,River Pack Solutions PLC,Food & Consumer,Key,Poland,EU,2023-09-16
+305,C100305,Aqua Plastics Pvt Ltd,Beverage,Standard,Sri Lanka,IND,2016-02-14
+306,C100306,Kestrel Closures Ltd,Beverage,Standard,Italy,EU,2021-12-19
+307,C100307,Summit Foods Co.,Beverage,Standard,Vietnam,SEA,2023-03-22
+308,C100308,Zenith Foods Ltd,Medical,Standard,Saudi Arabia,MEA,2022-12-22
+309,C100309,Quantum Polymers Co.,Beverage,Key,United Kingdom,EU,2019-04-18
+310,C100310,Kestrel Plastics LLC,Food & Consumer,Key,South Africa,MEA,2020-07-04
+311,C100311,Kestrel Pack Solutions Inc,Medical,,india,NA,2014-02-04
+312,C100312,Evergreen Plastics Ltd,Beverage,Key,United Arab Emirates,MEA,2016-06-11
+313,C100313,Indus Containers Co.,Medical,Key,Canada,NA,2018-07-22
+314,C100314,Orion MedTech Pvt Ltd,Beverage,Standard,Nigeria,MEA,2021-08-02
+315,C100315,Jade Foods SpA,Medical,Key,India,IND,2018-02-03
+316,C100316,Jade Packaging S.A.,Beverage,Standard,U.S.A.,NA,2019-07-28
+317,C100317,Aqua Polymers Pvt Ltd,Food & Consumer,Standard,Thailand,SEA,2021-08-19
+318,C100318,Indus Bottling LLC,Beverage,Standard,Bangladesh,IND,2022-08-28
+319,C100319,Falcon Plastics Co.,Beverage,Standard,Germany,EU,2018-01-11
+320,C100320,Horizon Industries PLC,Beverage,Standard,USA,NA,2014-08-28
+321,C900000,HORIZON FOODS PVT LIMITED,Beverage,Strategic,United States,NA,2015-06-01
+322,C900001,ORION FOODS S.A.,Food & Consumer,Strategic,Poland,EU,2018-04-09
+323,C900002,BLUE PACKAGING LLC,Medical,Standard,Japan,CNA,2015-05-10
+324,C900003,SUMMIT MEDTECH SPA,Beverage,Standard,Thailand,SEA,2023-12-08
+325,C900004,JADE MEDTECH CO.,Beverage,Standard,Indonesia,SEA,2017-12-19
+326,C900005,MERIDIAN BOTTLING LIMITED,Food & Consumer,Standard,United Kingdom,EU,2017-08-27

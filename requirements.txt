@@ -1,0 +1,4 @@
+# Only needed to regenerate data/ (scripts/generate_data.py).
+# These versions were checked to reproduce the committed CSVs exactly.
+pandas==3.0.6
+numpy==2.5.4

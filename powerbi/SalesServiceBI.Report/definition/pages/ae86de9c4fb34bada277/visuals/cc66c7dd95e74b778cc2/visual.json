@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "cc66c7dd95e74b778cc2",
+  "position": {
+    "x": 1535.2,
+    "y": 95,
+    "z": 7,
+    "height": 135,
+    "width": 364.8,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Aftermarket Share %"
+                }
+              },
+              "queryRef": "_Measures.Aftermarket Share %",
+              "nativeQueryRef": "Aftermarket Share %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

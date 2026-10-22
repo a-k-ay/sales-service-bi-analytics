@@ -1,0 +1,85 @@
+table dim_customer
+	lineageTag: f15b2a7d-813a-4a54-89da-152635b48830
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ad7bd2a-3461-44c2-a20e-2ba82862e2e2
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_number
+		dataType: string
+		lineageTag: b630fb8a-c449-438c-8acb-5cedb9be7c7c
+		summarizeBy: none
+		sourceColumn: customer_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_name
+		dataType: string
+		lineageTag: 917f5586-792c-486a-bb74-e97ffb671879
+		summarizeBy: none
+		sourceColumn: customer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column industry_segment
+		dataType: string
+		lineageTag: b4d6fc32-3766-4db2-b69b-a4b86c7c0801
+		summarizeBy: none
+		sourceColumn: industry_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_tier
+		dataType: string
+		lineageTag: ba1a59a6-8dd7-4387-bc3d-e60c8d0ab0f8
+		summarizeBy: none
+		sourceColumn: account_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 7fadd014-15c8-426f-a438-e0017afa72b9
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_code
+		dataType: string
+		lineageTag: 4fd6258d-4885-49f4-b382-0524b52af319
+		summarizeBy: none
+		sourceColumn: region_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_region_code
+		dataType: string
+		lineageTag: 1655cb43-d80c-4f12-95e6-af8f10f77716
+		summarizeBy: none
+		sourceColumn: source_region_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_check
+		dataType: string
+		lineageTag: ba22dd5a-a010-4cd6-a909-b7f3a60d22bd
+		summarizeBy: none
+		sourceColumn: region_check
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customer = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_dim_customer = Source{[Schema="bi",Item="dim_customer"]}[Data]
+				in
+				    bi_dim_customer
+

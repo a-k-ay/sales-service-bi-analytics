@@ -1,0 +1,64 @@
+table vw_data_quality_results
+	lineageTag: 95a578e4-fd76-40f9-8c8e-9deb63303817
+
+	column rule_id
+		dataType: string
+		lineageTag: 7c45b1ea-2417-4332-bbd6-6fecd52fa07c
+		summarizeBy: none
+		sourceColumn: rule_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dq_dimension
+		dataType: string
+		lineageTag: 4ef0d1ce-d704-4b56-a371-50afc6f1d6fc
+		summarizeBy: none
+		sourceColumn: dq_dimension
+
+		annotation SummarizationSetBy = Automatic
+
+	column table_name
+		dataType: string
+		lineageTag: 523b4714-ed52-43b4-98fe-e08def84763a
+		summarizeBy: none
+		sourceColumn: table_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column rule_desc
+		dataType: string
+		lineageTag: 1087a24d-0f07-4c76-a88f-91179d06c464
+		summarizeBy: none
+		sourceColumn: rule_desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column failed_rows
+		dataType: int64
+		formatString: 0
+		lineageTag: bb5d6058-3a76-42fa-87e4-30375c75a85c
+		summarizeBy: sum
+		sourceColumn: failed_rows
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_rows
+		dataType: int64
+		formatString: 0
+		lineageTag: 417c603a-14fc-422d-bf8e-9c56c77f5e57
+		summarizeBy: sum
+		sourceColumn: total_rows
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_data_quality_results = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_vw_data_quality_results = Source{[Schema="bi",Item="vw_data_quality_results"]}[Data]
+				in
+				    bi_vw_data_quality_results
+
+	annotation PBI_ResultType = Table
+

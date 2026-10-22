@@ -1,0 +1,147 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "1522578b88314cfe9857",
+  "position": {
+    "x": 20,
+    "y": 250,
+    "z": 4,
+    "height": 470,
+    "width": 1250,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_data_quality_results"
+                    }
+                  },
+                  "Property": "rule_id"
+                }
+              },
+              "queryRef": "vw_data_quality_results.rule_id",
+              "nativeQueryRef": "rule_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_data_quality_results"
+                    }
+                  },
+                  "Property": "dq_dimension"
+                }
+              },
+              "queryRef": "vw_data_quality_results.dq_dimension",
+              "nativeQueryRef": "dq_dimension"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_data_quality_results"
+                    }
+                  },
+                  "Property": "table_name"
+                }
+              },
+              "queryRef": "vw_data_quality_results.table_name",
+              "nativeQueryRef": "table_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_data_quality_results"
+                    }
+                  },
+                  "Property": "rule_desc"
+                }
+              },
+              "queryRef": "vw_data_quality_results.rule_desc",
+              "nativeQueryRef": "rule_desc"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "DQ Failed Rows"
+                }
+              },
+              "queryRef": "_Measures.DQ Failed Rows",
+              "nativeQueryRef": "DQ Failed Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "DQ Pass Rate %"
+                }
+              },
+              "queryRef": "_Measures.DQ Pass Rate %",
+              "nativeQueryRef": "DQ Pass Rate %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "vw_data_quality_results"
+                  }
+                },
+                "Property": "rule_id"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Rule results'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

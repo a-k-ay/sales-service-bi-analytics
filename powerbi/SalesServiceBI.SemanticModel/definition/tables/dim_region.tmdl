@@ -1,0 +1,36 @@
+table dim_region
+	lineageTag: 54cdd78b-7833-4a55-85b5-ee6542776ddf
+
+	column region_code
+		dataType: string
+		lineageTag: 925443e7-f4c9-4c1c-b000-3d526b54c4ab
+		summarizeBy: none
+		sourceColumn: region_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_name
+		dataType: string
+		lineageTag: 7e804892-e970-41b8-ba3f-4622e16f3550
+		summarizeBy: none
+		sourceColumn: region_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column super_region
+		dataType: string
+		lineageTag: e4f60af2-52cf-45c3-8d23-b95eb0388f37
+		summarizeBy: none
+		sourceColumn: super_region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_region = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_dim_region = Source{[Schema="bi",Item="dim_region"]}[Data]
+				in
+				    bi_dim_region
+

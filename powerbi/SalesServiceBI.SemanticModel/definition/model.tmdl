@@ -1,0 +1,36 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["dim_date","dim_customer","dim_product","dim_machine","dim_region","fact_sales","fact_service_ticket","fact_machine_daily","vw_data_quality_results","_Measures"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_date
+ref table dim_customer
+ref table dim_product
+ref table dim_machine
+ref table dim_region
+ref table fact_sales
+ref table fact_service_ticket
+ref table fact_machine_daily
+ref table vw_data_quality_results
+ref table _Measures
+
+ref role 'Region NA'
+ref role 'Region LATAM'
+ref role 'Region EU'
+ref role 'Region MEA'
+ref role 'Region IND'
+ref role 'Region SEA'
+ref role 'Region CNA'
+
+ref cultureInfo en-US
+

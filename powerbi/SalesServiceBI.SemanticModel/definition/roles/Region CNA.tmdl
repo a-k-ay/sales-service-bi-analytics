@@ -1,0 +1,7 @@
+role 'Region CNA'
+	modelPermission: read
+
+	tablePermission dim_region = [region_code] = "CNA"
+
+	annotation PBI_Id = 813c8068ca12489b97f2166893200806
+

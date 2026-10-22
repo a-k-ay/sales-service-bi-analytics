@@ -1,0 +1,84 @@
+table dim_machine
+	lineageTag: ef360b50-9c63-47d4-bf45-35c24c3fed3d
+
+	column machine_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e3f14215-15e3-489f-bd46-da89a15d2ba8
+		summarizeBy: none
+		sourceColumn: machine_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column serial_number
+		dataType: string
+		lineageTag: 0c4159f1-b776-4a9a-be1e-a1e682445ea5
+		summarizeBy: none
+		sourceColumn: serial_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: dae60bcb-19f3-429f-84d9-051ca1df4ec0
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c3160cd1-d60a-44a9-9b39-fa788584fb85
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column install_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1cf2f479-893f-4679-b3a8-ebc766fc2548
+		summarizeBy: none
+		sourceColumn: install_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column monitoring_tier
+		dataType: string
+		lineageTag: 194fb024-0829-4532-bd87-ce05a64cb3c1
+		summarizeBy: none
+		sourceColumn: monitoring_tier
+		sortByColumn: monitoring_tier_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column monitoring_tier_rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 427edf75-a5a5-4723-a3d3-a26e7826d98b
+		summarizeBy: none
+		sourceColumn: monitoring_tier_rank
+
+		annotation SummarizationSetBy = User
+
+	column is_monitored
+		dataType: string
+		lineageTag: 9f71b673-184e-4e02-ae17-fd8255e18770
+		summarizeBy: none
+		sourceColumn: is_monitored
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_machine = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_dim_machine = Source{[Schema="bi",Item="dim_machine"]}[Data]
+				in
+				    bi_dim_machine
+

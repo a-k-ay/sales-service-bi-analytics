@@ -1,0 +1,131 @@
+table fact_sales
+	lineageTag: 20d6947d-9343-42c9-947b-e870ee2364c0
+
+	column order_line_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e5b1235-8fb3-476e-8f65-e082f795178e
+		summarizeBy: sum
+		sourceColumn: order_line_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: int64
+		formatString: 0
+		lineageTag: be87c231-0e5f-4610-ae2c-951b36223b2e
+		summarizeBy: sum
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_number
+		dataType: string
+		lineageTag: 1b1c7517-c68d-42ee-a28e-9178eb65fcc3
+		summarizeBy: none
+		sourceColumn: order_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 17f6ccb5-42ff-4420-be86-37d047d6f38d
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ship_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 92ee590f-871f-451a-b142-b735780a0f5d
+		summarizeBy: none
+		sourceColumn: ship_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ae67f5d-9a29-4636-9cb2-c6e0db84f4ba
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 31aeffc7-15f6-424b-8a37-6f9c25518290
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_id
+		dataType: string
+		lineageTag: eda99dbc-3c1e-455c-870d-96aad9752dfd
+		summarizeBy: none
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_type
+		dataType: string
+		lineageTag: fce9be80-4659-450a-ba16-d7f1a525436e
+		summarizeBy: none
+		sourceColumn: order_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: 3a804f7b-cb7c-4558-be8b-669649d389a8
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e5a2533-6d8e-46ac-bb74-1678ee6b02b4
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column net_amount_usd
+		dataType: double
+		lineageTag: 5dfca7a4-a71c-4998-b71c-b31843a8094f
+		summarizeBy: sum
+		sourceColumn: net_amount_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column std_cost_amount_usd
+		dataType: double
+		lineageTag: 0419fdcf-b40c-4fe5-8f1d-77adc5bdf5ba
+		summarizeBy: sum
+		sourceColumn: std_cost_amount_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_sales = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_fact_sales = Source{[Schema="bi",Item="fact_sales"]}[Data]
+				in
+				    bi_fact_sales
+

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "8aa6976057014a7ba133",
+  "position": {
+    "x": 20,
+    "y": 740,
+    "z": 6,
+    "height": 325,
+    "width": 1880,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "How the clean bi views handle each issue",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DQ01 duplicate customers: mapped to one golden record (bi.customer_master_map).",
+                    "textStyle": {}
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DQ02 and DQ09 country spelling and region: standardised from reference tables; region is derived from the country.",
+                    "textStyle": {}
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DQ03 missing account tier: shown as Unassigned.",
+                    "textStyle": {}
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DQ04 and DQ05 orphan products and quantity of 0 or less: lines excluded from fact_sales.",
+                    "textStyle": {}
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DQ06 duplicate tickets: one copy kept (ROW_NUMBER).",
+                    "textStyle": {}
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DQ07 closed before opened: repair time left blank so MTTR is not distorted.",
+                    "textStyle": {}
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DQ08 impossible telemetry: excluded from OEE.",
+                    "textStyle": {}
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

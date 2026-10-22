@@ -1,0 +1,81 @@
+table dim_product
+	lineageTag: ecdbdb40-ccc1-45d8-aecc-9f1863f00857
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f464cb97-f8ca-4abf-8cd6-615c9c5734f7
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_code
+		dataType: string
+		lineageTag: b4bcc40d-2f67-4c85-af34-65f69d3ad710
+		summarizeBy: none
+		sourceColumn: product_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: c80990f4-5641-4b27-8718-eaf49c2eabb2
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_family
+		dataType: string
+		lineageTag: c7f55487-aee5-4403-82b6-aaaa5bf03a6c
+		summarizeBy: none
+		sourceColumn: product_family
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_type
+		dataType: string
+		lineageTag: 7d096851-34b6-47b1-8238-138db5b4ee26
+		summarizeBy: none
+		sourceColumn: product_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column industry
+		dataType: string
+		lineageTag: b6c48fc3-7311-4ea8-b34f-71b0cc6c1195
+		summarizeBy: none
+		sourceColumn: industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column list_price_usd
+		dataType: double
+		lineageTag: 289b4be2-ba3f-457e-ab89-d5f228df65d0
+		summarizeBy: sum
+		sourceColumn: list_price_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column std_cost_usd
+		dataType: double
+		lineageTag: e410d87f-f22f-409a-a242-9eceec7f30b0
+		summarizeBy: sum
+		sourceColumn: std_cost_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dim_product = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "SalesServiceBI"),
+				    bi_dim_product = Source{[Schema="bi",Item="dim_product"]}[Data]
+				in
+				    bi_dim_product
+

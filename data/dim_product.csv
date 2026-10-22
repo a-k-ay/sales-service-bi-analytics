@@ -1,0 +1,33 @@
+product_id,product_code,product_name,product_family,product_type,industry,list_price_usd,std_cost_usd,is_active
+1,SYS-PET-300,PET Preform System 300,PET Systems,System,Beverage,1850000,1147000.0,1
+2,SYS-PET-400,PET Preform System 400,PET Systems,System,Beverage,2300000,1403000.0,1
+3,SYS-PET-225,PET Preform System 225,PET Systems,System,Beverage,1250000,787500.0,1
+4,SYS-PET-CMP,PET Compact System,PET Systems,System,Beverage,1450000,928000.0,1
+5,SYS-CLS-4,Closure System 4,Closure Systems,System,Beverage,1650000,1023000.0,1
+6,SYS-CLS-PRO,Closure System Pro,Closure Systems,System,Beverage,1900000,1140000.0,1
+7,SYS-PKG-TW,Thinwall Packaging System,Packaging Systems,System,Food & Consumer,1550000,976500.0,1
+8,SYS-PKG-EL,Electric Packaging System,Packaging Systems,System,Food & Consumer,980000,637000.0,1
+9,SYS-MED,Medical Molding System,Medical Systems,System,Medical,1350000,783000.0,1
+10,MLD-PET-96,PET Preform Mold 96-cav,PET Tooling,Mold,Beverage,420000,231000.0,1
+11,MLD-PET-144,PET Preform Mold 144-cav,PET Tooling,Mold,Beverage,590000,324500.0,1
+12,MLD-CAP-72,Closure Mold 72-cav,Closure Molds,Mold,Beverage,310000,173600.0,1
+13,MLD-MED,Medical Precision Mold,Medical Molds,Mold,Medical,360000,187200.0,1
+14,HR-STD,Hot Runner Standard,Hot Runners,HotRunner,Multi,85000,42500.0,1
+15,HR-ADV,Hot Runner Advanced,Hot Runners,HotRunner,Multi,110000,53900.0,1
+16,HR-MOD,Hot Runner Modular,Hot Runners,HotRunner,Multi,64000,33280.0,1
+17,HR-CMP,Hot Runner Compact,Hot Runners,HotRunner,Multi,38000,20900.0,1
+18,CTL-BASIC,Hot Runner Controller Basic,Controllers,Controller,Multi,42000,18900.0,1
+19,CTL-MULTI,Hot Runner Controller Multi,Controllers,Controller,Multi,56000,26320.0,1
+20,PRT-NOZTIP,Nozzle Tip Kit,Spare Parts,Part,Multi,1200,420.0,1
+21,PRT-HEATER,Heater Band,Spare Parts,Part,Multi,450,135.0,1
+22,PRT-SCREW,Injection Screw,Spare Parts,Part,Multi,18500,7400.0,1
+23,PRT-SEALKIT,Seal Kit,Spare Parts,Part,Multi,780,218.4,1
+24,PRT-THERMO,Thermocouple Set,Spare Parts,Part,Multi,620,186.0,1
+25,PRT-VALVE,Hydraulic Valve,Spare Parts,Part,Multi,3400,1292.0,1
+26,PRT-COREINS,Core Insert,Spare Parts,Part,Multi,2600,936.0,1
+27,SVC-RM-BRZ,Remote Monitoring Bronze (annual),Remote Monitoring,Service,Multi,18000,7200.0,1
+28,SVC-RM-SLV,Remote Monitoring Silver (annual),Remote Monitoring,Service,Multi,32000,12160.0,1
+29,SVC-RM-GLD,Remote Monitoring Gold (annual),Remote Monitoring,Service,Multi,48000,17280.0,1
+30,SVC-RM-PLT,Remote Monitoring Platinum (annual),Remote Monitoring,Service,Multi,72000,24480.0,1
+31,SVC-REFURB,Hot Runner Refurbishment,Lifecycle,Service,Multi,22000,12100.0,1
+32,SVC-TRAIN,Training Course,Lifecycle,Service,Multi,4500,1350.0,1

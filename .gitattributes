@@ -1,0 +1,4 @@
+# Keep the CSVs byte-for-byte (LF line endings). sql/02 loads them with
+# ROWTERMINATOR = '0x0a'; git on Windows (core.autocrlf=true) would otherwise
+# turn them into CRLF on checkout and break the load.
+*.csv -text

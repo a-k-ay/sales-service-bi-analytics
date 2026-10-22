@@ -1,0 +1,45 @@
+relationship AutoDetected_098de0f1-df82-417d-862b-b83b1a6af72b
+	fromColumn: dim_machine.customer_id
+	toColumn: dim_customer.customer_id
+
+relationship AutoDetected_2a5aa77a-12f1-429e-8365-43f0c74ceb49
+	fromColumn: fact_sales.customer_id
+	toColumn: dim_customer.customer_id
+
+relationship AutoDetected_4bdfa7e5-2935-4984-ab9a-7cce2f4928fc
+	fromColumn: dim_customer.region_code
+	toColumn: dim_region.region_code
+
+relationship AutoDetected_d2180524-acb2-44c4-8771-e0dbdbdfe925
+	fromColumn: dim_machine.product_id
+	toColumn: dim_product.product_id
+
+relationship AutoDetected_448f0281-8daa-433f-8b02-163a9e1435bc
+	fromColumn: fact_sales.product_id
+	toColumn: dim_product.product_id
+
+relationship AutoDetected_ff15c805-dcb6-4ee1-af58-35be30a35feb
+	fromColumn: fact_service_ticket.machine_id
+	toColumn: dim_machine.machine_id
+
+relationship AutoDetected_f7ef85dc-03a0-4210-9406-a5ca2e8a486e
+	fromColumn: fact_machine_daily.machine_id
+	toColumn: dim_machine.machine_id
+
+relationship a5e1b534-4064-e697-ceed-26a6d988ad7d
+	fromColumn: fact_sales.order_date
+	toColumn: dim_date.date
+
+relationship 16b3739c-a0cf-608c-bc89-0c28232fc0a9
+	isActive: false
+	fromColumn: fact_sales.ship_date
+	toColumn: dim_date.date
+
+relationship ef39dcff-95b0-163c-9b7e-4304c6e553f4
+	fromColumn: fact_service_ticket.opened_date
+	toColumn: dim_date.date
+
+relationship af950cbc-5df9-fbe9-61ee-f0ac9ef17b3b
+	fromColumn: fact_machine_daily.perf_date
+	toColumn: dim_date.date
+

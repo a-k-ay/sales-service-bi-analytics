@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Power BI Project (.pbip): local-only files, never commit
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Personal Claude Code settings
+.claude/settings.local.json
+
+# Windows
+Thumbs.db
+desktop.ini
+

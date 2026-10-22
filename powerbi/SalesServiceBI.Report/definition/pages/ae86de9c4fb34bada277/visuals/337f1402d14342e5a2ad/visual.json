@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "337f1402d14342e5a2ad",
+  "position": {
+    "x": 20,
+    "y": 8,
+    "z": 0,
+    "height": 74,
+    "width": 1480,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Executive Sales",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "22pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "How are we doing, and where does revenue come from?  Sales & Service Analytics (synthetic data)",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#605e5c"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

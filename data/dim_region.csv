@@ -1,0 +1,8 @@
+region_code,region_name,super_region,service_center_tz
+NA,North America,Americas,America/Toronto
+LATAM,Latin America,Americas,America/Sao_Paulo
+EU,Europe,EMEA,Europe/Luxembourg
+MEA,Middle East & Africa,EMEA,Asia/Dubai
+IND,India & SAARC,APAC,Asia/Kolkata
+SEA,Southeast Asia,APAC,Asia/Singapore
+CNA,China & North Asia,APAC,Asia/Shanghai
