@@ -159,6 +159,9 @@ Found by profiling the raw data first (see `docs/profiling_notes.md` and
 | docs/query_log.md           | Every analysis query with its result and     |
 |                             | conclusion                                   |
 +-----------------------------+----------------------------------------------+
+| docs/performance_notes.md   | Model size by column, query timings, and the |
+|                             | tuning findings they led to                  |
++-----------------------------+----------------------------------------------+
 ```
 
 ## Skills demonstrated
@@ -187,6 +190,11 @@ Found by profiling the raw data first (see `docs/profiling_notes.md` and
 | Tabular model best practice    | Best Practice Analyzer (Tabular Editor):  |
 |                                | 228 findings to 52; descriptions, display |
 |                                | folders; .pbix 11 MB to 5.5 MB            |
++--------------------------------+-------------------------------------------+
+| Performance tuning             | VertiPaq Analyzer and Server Timings (DAX |
+|                                | Studio): found 20% of the model was       |
+|                                | redundant columns                         |
+|                                | (docs/performance_notes.md)               |
 +--------------------------------+-------------------------------------------+
 | Security                       | Row-level security, one role per region   |
 +--------------------------------+-------------------------------------------+
